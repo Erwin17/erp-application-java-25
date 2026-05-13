@@ -2,6 +2,10 @@ plugins {
     id 'org.springframework.boot'
 }
 
+springBoot {
+    mainClass = 'com.erwincorzo.erp_lite.ErpLiteApplication'
+}
+
 dependencies {
     // Spring Web solo para el módulo API
     implementation 'org.springframework.boot:spring-boot-starter-web'
