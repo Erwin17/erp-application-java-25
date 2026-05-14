@@ -33,6 +33,12 @@ subprojects {
         }
     }
 
+    dependencyManagement {
+        imports {
+            mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+        }
+    }
+
     dependencies {
 
         //developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -43,6 +49,12 @@ subprojects {
         testAnnotationProcessor 'org.projectlombok:lombok'
         compileOnly 'org.projectlombok:lombok'
         testCompileOnly 'org.projectlombok:lombok'
+
+        //MapStruct
+        implementation 'org.mapstruct:mapstruct:1.6.3'
+        implementation 'org.mapstruct:mapstruct-processor:1.6.3'
+        implementation 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+
     }
 
     tasks.named('test') {
